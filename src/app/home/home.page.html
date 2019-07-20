@@ -1,14 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Delivery App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-input [(ngModel)]="username" placeholder="username"></ion-input> <br>
+    <ion-input [(ngModel)]="password" type="password" placeholder="password"></ion-input><br>
+    <ion-button color="primary" (click)="login()">Login</ion-button>
   </div>
 </ion-content>

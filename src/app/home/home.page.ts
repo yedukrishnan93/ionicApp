@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
-
+username:string = null;
+password:string = null;
+  constructor(private authSvc:AuthService ,private router:Router) {}
+  login(){
+     let userData = {
+       "username":this.username,
+       "password":this.password
+     }
+    if(this.authSvc.auth(userData)){
+      this.router.navigateByUrl("user-home");
+    } 
+    
+  }
 }
