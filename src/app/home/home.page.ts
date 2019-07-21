@@ -17,7 +17,7 @@ password:string = null;
        "password":this.password
      }
     if(this.authSvc.auth(userData)){
-      this.router.navigateByUrl("user-home");
+      this.router.navigateByUrl("user");
     } 
     
   }
